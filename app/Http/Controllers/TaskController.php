@@ -49,6 +49,8 @@ class TaskController extends Controller implements HasMiddleware
             'title' => 'required|string|max:255',
             'description' => 'nullable|string',
             'due_date' => 'nullable|date',
+            'status_id' => 'required', 
+            'category_id' => 'required'
         ]);
 
         $task = $request->user()->tasks()->create($request->all());
