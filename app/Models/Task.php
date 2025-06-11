@@ -18,12 +18,12 @@ class Task extends Model
 
     public function taskStatus()
     {
-        return $this->belongsTo(taskStatus::class);
+        return $this->hasMany(taskStatus::class);
     }
 
     public function taskCategory()
     {
-        return $this->belongsTo(taskCategory::class);
+        return $this->hasMany(taskCategory::class);
     }
 
     
