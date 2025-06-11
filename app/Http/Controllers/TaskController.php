@@ -12,7 +12,7 @@ class TaskController extends Controller implements HasMiddleware
 {
     public static function middleware() {
         return [
-            new Middleware('auth:sanctum', except: ['store', 'show'])
+            new Middleware('auth:sanctum', except: ['show'])
         ];
     }
     
