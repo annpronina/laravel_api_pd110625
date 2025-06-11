@@ -73,7 +73,7 @@ class TaskController extends Controller implements HasMiddleware
         $request->validate([
             'title' => 'sometimes|required|string|max:255',
             'description' => 'nullable|string',
-            'due_date' => 'nullable|date',
+            'due_date' => 'nullable|date'
         ]);
 
         $task->update($request->all());

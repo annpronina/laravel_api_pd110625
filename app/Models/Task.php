@@ -9,7 +9,7 @@ class Task extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'description', 'due_date', 'user_id', 'status_id', 'category_id'];
+    protected $fillable = ['title', 'description', 'due_date','user_id', 'status_id', 'category_id'];
 
     public function user()
     {
@@ -26,5 +26,8 @@ class Task extends Model
         return $this->hasMany(taskCategory::class);
     }
 
+    public function comments() {
+        return $this->hasMany(Comment::class);
+    }
     
 }
